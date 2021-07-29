@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar
         app
-        color="primary"
+        color="#2b4d47"
         dark
     >
       <v-img
@@ -22,12 +22,14 @@
           :mighties="mighties"
       />
     </v-main>
-    <v-footer>
+    <v-footer color="white">
       <v-expansion-panels
           flat
       >
         <v-expansion-panel>
-          <v-expansion-panel-header>
+          <v-expansion-panel-header
+              class="vollkorn"
+          >
             {{imprint.title}}
           </v-expansion-panel-header>
           <v-expansion-panel-content>
@@ -61,18 +63,21 @@ export default {
     spirits: [
       {
         url: 'https://monshiners.de',
+        title: 'Monshiners \' Obstbrand 2020',
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
-        src: require('@/assets/logo.png')
+        src: require('@/assets/monshiners_bottle.png')
       },
       {
         url: 'https://simplykaschemm.de',
+        title: 'Don Papa Sherry Cask',
         text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
-        src: require('@/assets/logo.png')
+        src: require('@/assets/donpapa_test.jpg')
       },
     ],
     mighties: {
-      src: require('@/assets/logo.png')
+      src: require('@/assets/mighties_logo.png')
     },
+    bands:[],
     imprint: {
       title: 'Impressum',
       text: 'text'
@@ -80,3 +85,11 @@ export default {
   }),
 };
 </script>
+
+<style lang="scss">
+@import 'src/styles/variables.scss';
+
+.vollkorn{
+  font-family: $vollkorn;
+}
+</style>

@@ -8,19 +8,19 @@
   <v-card-text>
     {{description.text}}
   </v-card-text>
-  <v-img
-      max-width="70%"
-      class="mx-auto"
-      :src="donation.src"
-  ></v-img>
   <v-card-title
-      class="d-flex justify-center"
+      class="d-flex justify-center vollkorn"
   >
     Wofür sammeln wir?
   </v-card-title>
   <v-card-text>
     {{donation.text}}
   </v-card-text>
+  <v-img
+      max-width="70%"
+      class="mx-auto"
+      :src="donation.src"
+  ></v-img>
 </v-card>
 </template>
 
