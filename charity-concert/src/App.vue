@@ -1,60 +1,82 @@
 <template>
   <v-app>
     <v-app-bar
-      app
-      color="primary"
-      dark
+        app
+        color="primary"
+        dark
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-img
+          max-width="40%"
+          class="mx-auto mt-15"
+          :src="require('@/assets/logo.png')"
+      ></v-img>
     </v-app-bar>
-
     <v-main>
-      <HelloWorld/>
+      <about
+          :description="description"
+          :donation="donation"
+      />
+      <v-divider/>
+      <auction
+          :spirits="spirits"
+          :mighties="mighties"
+      />
     </v-main>
+    <v-footer>
+      <v-expansion-panels
+          flat
+      >
+        <v-expansion-panel>
+          <v-expansion-panel-header>
+            {{imprint.title}}
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            {{imprint.text}}
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import About from '@/components/About'
+import Auction from '@/components/Auction'
 
 export default {
   name: 'App',
-
   components: {
-    HelloWorld,
+    About,
+    Auction
   },
-
   data: () => ({
-    //
+    description: {
+      src: require('@/assets/logo.png'),
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    },
+    donation: {
+      src: require('@/assets/logo.png'),
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    },
+    spirits: [
+      {
+        url: 'https://monshiners.de',
+        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
+        src: require('@/assets/logo.png')
+      },
+      {
+        url: 'https://simplykaschemm.de',
+        text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et',
+        src: require('@/assets/logo.png')
+      },
+    ],
+    mighties: {
+      src: require('@/assets/logo.png')
+    },
+    imprint: {
+      title: 'Impressum',
+      text: 'text'
+    }
   }),
 };
 </script>
