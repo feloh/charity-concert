@@ -1,26 +1,45 @@
 <template>
-<v-card>
-  <v-img
-      max-width="70%"
-      class="mx-auto"
-      :src="description.src"
-  ></v-img>
+<v-card
+    outlined
+    color="transparent"
+>
   <v-card-text>
     {{description.text}}
   </v-card-text>
-  <v-card-title
-      class="d-flex justify-center vollkorn"
-  >
-    Wofür sammeln wir?
-  </v-card-title>
+    <v-img
+        max-width="80%"
+        contain
+        class="mx-auto"
+        :src="description.title"
+    >
+    </v-img>
   <v-card-text>
     {{donation.text}}
   </v-card-text>
-  <v-img
-      max-width="70%"
-      class="mx-auto"
-      :src="donation.src"
-  ></v-img>
+  <v-card-text>
+    <v-carousel
+        cycle
+        continuous
+        hide-delimiters
+        hide-delimiter-background
+        :show-arrows="false"
+        height="200"
+    >
+      <v-carousel-item
+          v-for="(src,i) in donation.src"
+          :key="i"
+          class="d-flex align-center"
+
+      >
+        <v-img
+            class="my-auto pa-5 carousel-img"
+            :src="src"
+            aspect-ratio="1.77"
+        >
+        </v-img>
+      </v-carousel-item>
+    </v-carousel>
+  </v-card-text>
 </v-card>
 </template>
 
@@ -41,5 +60,7 @@ name: "About",
 </script>
 
 <style scoped>
-
+.carousel-img{
+  border: 10px solid black;
+}
 </style>
