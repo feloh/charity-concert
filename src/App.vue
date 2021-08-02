@@ -37,10 +37,21 @@
       <v-expansion-panel-header
           class="source-sans-pro"
       >
-        {{imprint.title}}
+        Impressum
       </v-expansion-panel-header>
       <v-expansion-panel-content>
-        {{imprint.text}}
+        <h1>Impressum</h1>
+
+        <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+        <p>Felix Lohmann<br />
+          Freiheit 2<br />
+          40789 Monheim</p>
+
+        <h2>Kontakt</h2>
+        <p>Telefon: &#91;Telefonnummer&#93;<br />
+          E-Mail: feloh@gmx.de</p>
+
+        <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
       </v-expansion-panel-content>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -90,10 +101,6 @@ export default {
       text: 'Die Mighties beehren uns und werden nicht irgendwelche Songs spielen. Aus 25 Songs könnt ihr die TOP 8 des Abends ersteigern. Umso mehr Geld für einen Song zusammenkommt, umso höher ist die Wahrscheinlichkeit, dass er gespielt wird!'
     },
     bands:[],
-    imprint: {
-      title: 'Impressum',
-      text: 'text'
-    }
   }),
 };
 </script>

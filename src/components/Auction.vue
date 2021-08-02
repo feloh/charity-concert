@@ -25,7 +25,7 @@
         />
       </v-col>
     </v-row>
-    <v-row justify-md="center" no-gutters>
+    <v-row justify-md="center" class="mt-md-15" no-gutters>
       <v-col
           cols="12"
           md="4"
@@ -38,6 +38,12 @@
         />
       </v-col>
       <v-col
+          cols="12"
+          md="6"
+      >
+      <iframe :width="$vuetify.breakpoint.mdAndUp ? '600' : '100%'" :height="$vuetify.breakpoint.mdAndUp ? '371' : '100%'" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3086Tpt4swtwbVo-4Dzu7-aY9swFB9cNjMEzFd4tFOr6Gjs3q0lF-zS04GRieWOicx4zUVxEsWUgi/pubchart?oid=2040430817&amp;format=interactive"></iframe>
+      </v-col>
+        <v-col
           cols="12"
           md="4"
           class="d-flex flex-column align-md-center justify-md-center pa-md-10"
@@ -53,6 +59,8 @@
               color="#ff0000"
               class="mx-auto source-sans-pro white--text"
               elevation="8"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScbFnqYbzoXbavnsl8pRVV0vgnlpUrCMbDFUu7CUaLdjtkHiw/viewform?usp=sf_link"
+              target="_blank"
           >
             JETZT BIETEN
           </v-btn>
