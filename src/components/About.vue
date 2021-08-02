@@ -1,56 +1,54 @@
 <template>
-<v-card
-    outlined
-    color="transparent"
->
-  <v-card-text>
-    {{description.text}}
-  </v-card-text>
-    <v-img
-        max-width="80%"
-        contain
-        class="mx-auto"
-        :src="description.title"
-    >
-    </v-img>
-  <v-card-text>
-    {{donation.text}}
-  </v-card-text>
-  <v-card-text>
-    <v-carousel
-        cycle
-        continuous
-        hide-delimiters
-        hide-delimiter-background
-        :show-arrows="false"
-        height="200"
-    >
-      <v-carousel-item
-          v-for="(src,i) in donation.src"
-          :key="i"
-          class="d-flex align-center"
-
+  <v-card
+      outlined
+      color="transparent"
+  >
+    <v-row justify="center">
+      <v-col
+          cols="12"
+          md="7"
+      >
+        <v-card-text
+            class="text-md-h6 black--text text-md-justify"
+        >
+          {{description.text}}
+        </v-card-text>
+      </v-col>
+      <v-col
+          cols="12"
+          md="7"
       >
         <v-img
-            class="my-auto pa-5 carousel-img"
-            :src="src"
-            aspect-ratio="1.77"
+            :width="$vuetify.breakpoint.mdAndUp ? '40%' : '80%'"
+            contain
+            class="mx-auto"
+            :src="description.title"
         >
         </v-img>
-      </v-carousel-item>
-    </v-carousel>
-  </v-card-text>
-</v-card>
+      </v-col>
+      <v-col
+          cols="12"
+          md="7"
+      >
+        <v-card-text
+            class="text-md-h6  black--text text-md-justify"
+
+        >
+          {{donation.text}}
+        </v-card-text>
+      </v-col>
+    </v-row>
+  </v-card>
 </template>
 
 <script>
 export default {
-name: "About",
+  name: "About",
   props:{
-  description:{
-    type: Object,
-    default: () =>{return {src:"", text: "Es ist ein Fehler aufgetreten."}}
-  },
+    description:{
+      type: Object,
+      default: () =>{return {src:"", text: "Es ist ein Fehler aufgetreten."}}
+    },
     donation:{
       type: Object,
       default: () => {return  {src:"", text: "Es ist ein Fehler aufgetreten."}}
@@ -60,7 +58,20 @@ name: "About",
 </script>
 
 <style scoped>
-.carousel-img{
+.comic-img-mdAndUp{
   border: 10px solid black;
 }
+
+.comic-img{
+  border: 5px solid black;
+}
+
+.comic{
+  width: 70%;
+}
+
+.comic-mdAndUp{
+  width: 100%;
+}
+
 </style>

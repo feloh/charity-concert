@@ -3,81 +3,52 @@
   <v-card
       outlined
       color="transparent"
-      class="px-0 mb-10"
+      class="mb-15"
   >
-    <v-img
-        :src="require('@/assets/auction_title.png')"
-        contain
-        max-width="90%"
-        class="mx-auto"
-    />
-    <v-img
-        :src="require('@/assets/setlist.png')"
-        contain
-        max-width="90%"
-        class="mx-auto mt-10"    />
-    <v-card-text class="pt-8">
-      {{mighties.text}}
-    </v-card-text>
-    <v-img
-        :src="mighties.src"
-        contain
-        width="300"
-        class="mx-auto"
-        style="mix-blend-mode: multiply;"
-    />
-    <v-card-actions>
-      <v-btn
-          color="#ff0000"
-          class="mx-auto source-sans-pro white--text"
-          elevation="8"
-      >
-        JETZT BIETEN
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-  <v-card
-      outlined
-      color="transparent"
-      class="px-0"
-  >
-    <v-img
-        :src="require('@/assets/spirits.png')"
-        contain
-        max-width="90%"
-        class="mx-auto"
-    />
-    <v-card-text
-        v-for="(spirit, i) in spirits"
-        :key="`${i}-spirit`"
+    <v-row
+        justify="center"
+        class="px-7 px-md-0"
     >
-      <v-row no-gutters>
-        <v-col
-            cols="12"
+      <v-col
+          md="6"
+          class="d-flex justify-start"
+      >
+        <v-img
+            :src="require('@/assets/setlist.png')"
+            contain
+            :width="$vuetify.breakpoint.mdAndUp ? '300px' : '25px'"
+        />
+        <v-img
+            :src="require('@/assets/auction_title.png')"
+            contain
+            :width="$vuetify.breakpoint.mdAndUp ? '300px' : '5px'"
+        />
+      </v-col>
+    </v-row>
+    <v-row justify-md="center" no-gutters>
+      <v-col
+          cols="12"
+          md="4"
+      >
+        <v-img
+            :src="mighties.src"
+            contain
+            class="mx-auto"
+            style="mix-blend-mode: multiply;"
+        />
+      </v-col>
+      <v-col
+          cols="12"
+          md="4"
+          class="d-flex flex-column align-md-center justify-md-center pa-md-10"
+      >
+        <v-card-text
+            class="pt-8 pt-md-0 text-md-justify text-md-h6 mx-auto"
+            style="max-width: 500px"
         >
-          <v-img
-              :src="require('@/assets/zoom.svg')"
-              class="py-5 d-flex align-center"
-              height="400"
-          >
-            <v-img
-                :src="spirit.src"
-                width="250"
-                class="mx-auto"
-                contain
-            ></v-img>
-          </v-img>
-        </v-col>
-        <v-col
-            cols="12"
-            class="d-flex flex-column"
-        >
-          <v-card-title
-              class="d-flex justify-start source-sans-pro black--text px-0"
-          >
-            {{spirit.title}}
-          </v-card-title>
-          <p>{{ spirit.text }}</p>
+          {{mighties.text}}
+        </v-card-text>
+        <v-card-actions>
           <v-btn
               color="#ff0000"
               class="mx-auto source-sans-pro white--text"
@@ -85,8 +56,85 @@
           >
             JETZT BIETEN
           </v-btn>
+        </v-card-actions>
+      </v-col>
+    </v-row>
+  </v-card>
+  <v-card
+      outlined
+      color="transparent"
+      class="px-0 mt-15"
+  >
+    <v-row
+        justify="center"
+        class="px-7 px-md-0"
+    >
+      <v-col
+          md="6"
+          class="d-flex justify-start"
+      >
+        <v-img
+            :src="require('@/assets/spirits.png')"
+            contain
+            :width="$vuetify.breakpoint.mdAndUp ? '300px' : '25px'"
+        />
+        <v-img
+            :src="require('@/assets/auction_title.png')"
+            contain
+            :width="$vuetify.breakpoint.mdAndUp ? '300px' : '5px'"
+        />
+      </v-col>
+    </v-row>
+    <v-card-text>
+      <v-row>
+        <v-col
+            v-for="(spirit, i) in spirits"
+            :key="`${i}-spirit`"
+            cols="12"
+            md="6"
+        >
+          <v-row no-gutters justify="center">
+            <v-col
+                cols="12"
+                md="6"
+            >
+              <v-img
+                  :src="require('@/assets/zoom.svg')"
+                  class="py-5 d-flex align-center mx-auto"
+                  height="400"
+                  :width="$vuetify.breakpoint.mdAndUp ? '400' : ''"
+              >
+                <v-img
+                    :src="spirit.src"
+                    width="250"
+                    class="mx-auto"
+                    contain
+                ></v-img>
+              </v-img>
+            </v-col>
+            <v-col
+                cols="12"
+                md="6"
+                class="d-flex flex-column pa-5"
+            >
+              <v-card-title
+                  class="d-flex justify-start source-sans-pro black--text px-0"
+              >
+                {{spirit.title}}
+              </v-card-title>
+              <p>{{ spirit.text }}</p>
+              <v-btn
+                  color="#ff0000"
+                  class="mx-auto source-sans-pro white--text"
+                  elevation="8"
+              >
+                JETZT BIETEN
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
+
     </v-card-text>
   </v-card>
   </div>
