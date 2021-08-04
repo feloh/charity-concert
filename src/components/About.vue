@@ -3,7 +3,7 @@
       outlined
       color="transparent"
   >
-    <v-row justify="center">
+    <v-row justify="center" class="mb-15">
       <v-col
           cols="12"
           md="7"
@@ -36,6 +36,89 @@
         >
           {{donation.text}}
         </v-card-text>
+      </v-col>
+      <v-col
+          cols="12"
+          md="7"
+      >
+        <v-img
+            :width="$vuetify.breakpoint.mdAndUp ? '40%' : '80%'"
+            contain
+            class="mx-auto"
+            :src="description.help"
+        >
+        </v-img>
+      </v-col>
+      <v-col
+          cols="12"
+          md="7"
+      >
+        <v-card-text
+            class="text-md-h6  black--text text-md-justify"
+
+        >
+          <p>
+            {{donation.donation}}
+          </p>
+          <v-row
+              class="my-5"
+              justify="center"
+              justify-md="space-around"
+          >
+           <span
+               class="mx-auto source-sans-pro red--text"
+           >
+             IBAN DEXXXXXXXXXXXXXXXXXXX
+           </span>
+            <v-btn
+                color="#ff0000"
+                class="mx-auto source-sans-pro white--text"
+                elevation="8"
+                target="_blank"
+                href="https://paypal.me/pools/c/8BJkhuYJZc"
+            >
+              PAYPAL
+            </v-btn>
+          </v-row>
+          <p>
+          {{donation.help}}
+          </p>
+          <p
+              class="d-flex justify-center"
+          >
+            Du hast eine Idee oder willst helfen? Hier kannst du dich melden:
+          </p>
+          <v-row
+              class="mt-5"
+              justify="center"
+              justify-md="space-around"
+          >
+            <a
+                class="source-sans-pro red--text"
+                href="mailto:spielmann@fraeulein-hirsch.de"
+            >
+              spielmann@fraeulein-hirsch.de
+            </a>
+            <a
+                class="source-sans-pro red--text mt-10 mt-md-0"
+                href="mailto:felix@monshiners.de"
+            >
+              felix@monshiners.de
+            </a>
+          </v-row>
+        </v-card-text>
+      </v-col>
+      <v-col
+          cols="12"
+          md="7"
+      >
+        <v-img
+            :width="$vuetify.breakpoint.mdAndUp ? '50%' : '80%'"
+            contain
+            class="mx-auto"
+            :src="description.lineUp"
+        >
+        </v-img>
       </v-col>
     </v-row>
   </v-card>

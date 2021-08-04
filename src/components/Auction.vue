@@ -41,7 +41,7 @@
           cols="12"
           md="6"
       >
-      <iframe :width="$vuetify.breakpoint.mdAndUp ? '600' : '100%'" :height="$vuetify.breakpoint.mdAndUp ? '371' : '100%'" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3086Tpt4swtwbVo-4Dzu7-aY9swFB9cNjMEzFd4tFOr6Gjs3q0lF-zS04GRieWOicx4zUVxEsWUgi/pubchart?oid=2040430817&amp;format=interactive"></iframe>
+      <iframe :width="$vuetify.breakpoint.mdAndUp ? '600' : '100%'" :height="$vuetify.breakpoint.mdAndUp ? '371' : '430'" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3086Tpt4swtwbVo-4Dzu7-aY9swFB9cNjMEzFd4tFOr6Gjs3q0lF-zS04GRieWOicx4zUVxEsWUgi/pubchart?oid=2040430817&amp;format=interactive"></iframe>
       </v-col>
         <v-col
           cols="12"
@@ -94,7 +94,7 @@
       </v-col>
     </v-row>
     <v-card-text>
-      <v-row>
+      <v-row justify="center">
         <v-col
             v-for="(spirit, i) in spirits"
             :key="`${i}-spirit`"
@@ -130,7 +130,7 @@
               >
                 {{spirit.title}}
               </v-card-title>
-              <p>{{ spirit.text }}</p>
+              <p class="text-md-h6 black--text">{{ spirit.text }}</p>
               <v-btn
                   color="#ff0000"
                   class="mx-auto source-sans-pro white--text"
