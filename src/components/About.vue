@@ -62,23 +62,33 @@
           </p>
           <v-row
               class="my-5"
-              justify="center"
-              justify-md="space-around"
+              justify="space-around"
           >
-           <span
-               class="mx-auto source-sans-pro red--text"
-           >
-             IBAN DEXXXXXXXXXXXXXXXXXXX
-           </span>
+            <v-col
+                cols="12"
+                md="6"
+            >
+              <p
+                  class=" text-center source-sans-pro red--text"
+              >
+                IBAN DE 51 3056 0548 0029 6900 14
+              </p>
+            </v-col>
+          <v-col
+              cols="12"
+              md="6"
+              class="d-flex justify-center"
+          >
             <v-btn
                 color="#ff0000"
-                class="mx-auto source-sans-pro white--text"
+                class="source-sans-pro white--text"
                 elevation="8"
                 target="_blank"
                 href="https://paypal.me/pools/c/8BJkhuYJZc"
             >
               PAYPAL
             </v-btn>
+          </v-col>
           </v-row>
           <p>
           {{donation.help}}

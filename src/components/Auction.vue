@@ -92,7 +92,18 @@
             :width="$vuetify.breakpoint.mdAndUp ? '300px' : '5px'"
         />
       </v-col>
+      <v-col
+          cols="12"
+      >
+        <v-card
+            color="red"
+            class="source-sans-pro white--text text-center"
+        >
+          Die Auktionen enden am 20.08.21 um 21:00
+        </v-card>
+      </v-col>
     </v-row>
+
     <v-card-text>
       <v-row justify="center">
         <v-col
@@ -114,6 +125,7 @@
               >
                 <v-img
                     :src="spirit.src"
+                    :lazy-src="require('@/assets/loading.gif')"
                     width="250"
                     class="mx-auto"
                     contain
@@ -135,6 +147,8 @@
                   color="#ff0000"
                   class="mx-auto source-sans-pro white--text"
                   elevation="8"
+                  :href="spirit.url"
+                  target="_blank"
               >
                 JETZT BIETEN
               </v-btn>

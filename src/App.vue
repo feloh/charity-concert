@@ -140,7 +140,7 @@ export default {
       title: require('@/assets/description_title.png'),
       help: require('@/assets/help.png'),
       lineUp: require('@/assets/lineUp.png'),
-      text: 'Am 20.08.21 wird in der Monheimer Altstadt gemeinsam für den guten Zweck gefeiert. Alle Spenden gehen nach Dernau an die Ahr. Wie kann man helfen Wie kann man helfen? Komm einfach vorbei, genießt handgemachte Live-Musik auf der großen Altstadtbühne und habt ein pralles Portemonnaie für Spenden dabei. Alles Künstler treten umsonst auf. Wir gehen mit dem Hut der selbstverständlich in den großen Sammeltopf kommt. Kalte Getränke frisch vom Fass sowie leckere Snacks warten neben dem Bühnenprogramm auf euch.'
+      text: 'Am 20.08.21 wird in der Monheimer Altstadt gemeinsam für den guten Zweck gefeiert. Alle Spenden gehen nach Dernau an die Ahr. Wie kann man helfen? Komm einfach vorbei, genieß handgemachte Live-Musik auf der großen Altstadtbühne und hab ein pralles Portemonnaie für Spenden dabei. Alle Künstler treten umsonst auf. Wir gehen mit dem Hut rum, der selbstverständlich in den großen Sammeltopf kommt. Kalte Getränke frisch vom Fass sowie leckere Snacks warten neben dem Bühnenprogramm auf euch.'
     },
     donation: {
       text: 'Dernau - ein ehemals malerisches Örtchen westlich von Bad Neuenahr-Ahrweiler mit rund 1700 Einwohnern - war eines der beliebtesten Ausflugsziele an der Ahr. Bekannt für seine historischen Weinkeller, die großen Weinbauflächen und den berühmten Rotweinwanderweg zog es jedes Jahr zahlreiche Touristen an.  Durch die Flutkatastrophe wurden nun nicht nur Häuser, Autos und Brücken zerstört, auch private und berufliche Existenzen liegen in Trümmern. Um das Ahrtal und Dernau wieder in seiner alten Schönheit erstrahlen zu lassen wird jede Hilfe benötigt und dafür brauchen wir euch! ',
@@ -149,19 +149,19 @@ export default {
     },
     spirits: [
       {
-        url: 'https://monshiners.de',
+        url: 'https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2060353.m570.l1313&_nkw=monshiners&_sacat=0',
         title: 'MONSHINERS\' OBSTBRAND 20',
         text: 'Heiß begehrt und nach 21 Minuten ausverkauft: Das war die erste Abfüllung der Monshiners aus 2020! Jetzt werden die letzten Flaschen für den guten Zweck versteigert. Das Besondere: Die Seriennummer wurden durch 40789 und 4019 ersetzt.',
         src: require('@/assets/monshiners_bottle.png')
       },
       {
-        url: 'https://monshiners.de',
+        url: 'https://www.ebay.de/itm/373678776341',
         title: 'Rosebank 1991 Signatory Vintage 12 Jahre',
         text: 'Ein besonders rarer Tropfen der mittlerweile geschlossenen Rosebank Distillery in den schottischen Lowlands. Flasche Nr.272 von nur 467.',
         src: require('@/assets/signatory.png')
       },
       {
-        url: 'https://simplykaschemm.de',
+        url: 'https://www.ebay.de/itm/373678766856',
         title: 'DON PAPA SHERRY CASK',
         text: 'Simply Kaschemm versteigert einen besonders feinen Tropfen. Der Don Papa Sherry Cask reift zunächst für vier Jahre in Ex-Bourbonfässern aus amerikanischer Weißeiche und erhält anschließend für 18 Monate ein Finish in vier verschiedenen spanischen Sherryfässern. Auch hier wieder eine limitierte Edition.',
         src: require('@/assets/don_papa.png')
@@ -171,12 +171,26 @@ export default {
       {
         url: 'https://monshiners.de',
         text: 'Obstbrände aus dem Monheimer Rheinbogen. Die schnellsten Treckerfahrer der Stadt. Geistreiche Trinker und Obstbauern aus Leidenschaft.',
+        contain: false,
         src: require('@/assets/participants/monshiners.jpg')
       },
       {
         url: 'https://simply-kaschemm.com/',
         text: 'Ausgewählte Spirituosen aus aller Welt von Liebhabern für Liebhaber. Und für die, die es werden wollen.',
+        contain: false,
         src: require('@/assets/participants/simply_kaschemm.jpg')
+      },
+      {
+        url: 'https://www.sh-buchbender.de/',
+        text: 'Seit über 35 Jahren diskrete und kompetente Beratung im Herzen von Monheim.',
+        contain: true,
+        src: require('@/assets/participants/buchbender.png')
+      },
+      {
+        url: 'https://www.trinkgut.de/markt/rusche',
+        text: 'trinkgut Rusche ist Ihr Getränkemarkt in Monheim. In unserem Getränkemarkt finden Sie eine großzügige Auswahl von Bier über Limonaden, Wasser bis hin zu Spirituosen, ob regionale Spezialitäten oder globale Marken.',
+        contain: true,
+        src: require('@/assets/participants/trinkgut_rusche.png')
       }
     ],
     mighties: {
